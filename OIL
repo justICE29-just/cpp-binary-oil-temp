@@ -4,6 +4,9 @@ using namespace std;
 int main() {
     int t1, t2, t3;
 
+    cout << "Welcome to Magwinya Oil Temperature Monitor!\n";
+    cout << "------------------------------------------------\n";
+
     cout << "Enter first temperature: ";
     cin >> t1;
 
@@ -11,20 +14,23 @@ int main() {
     cin >> t2;
 
     if (t2 - t1 > 50) {
-        cout << "Reduce fryer heat before taking the third reading.\n";
+        cout << "⚠ Reduce fryer heat before taking the third reading.\n";
     } else if (t2 - t1 < 10) {
-        cout << "Increase fryer heat before taking the third reading.\n";
+        cout << "⚠ Increase fryer heat before taking the third reading.\n";
     }
 
     cout << "Enter third temperature: ";
     cin >> t3;
 
-    // Check if the oil is within the correct frying range
     if (t3 >= 150 && t3 <= 190) {
-        cout << "You may start frying the Magwinyas.\n";
+        cout << "✅ You may start frying the Magwinyas.\n";
     } else {
-        cout << "Oil is not ready for frying!\n";
+        cout << "❌ Oil is not ready for frying!\n";
     }
+
+    cout << "------------------------------------------------\n";
+    cout << "Program completed. Have a great day!\n";
 
     return 0;
 }
+
