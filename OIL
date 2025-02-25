@@ -1,24 +1,18 @@
 #include <iostream>
 using namespace std;
-	
-int main() {
-    int t1, t2, t3;
 
+int main() {
+    int t1, t2, t3; // Declare temperature variables
+
+    // Get the first temperature reading
     cout << "Enter first temperature: ";
     cin >> t1;
 
     cout << "Enter second temperature: ";
     cin >> t2;
 
-    // Check if temperature change is within valid range
-    if (t2 - t1 > 50) {
-        cout << "Reduce fryer heat before taking the third reading.\n";
-    } else if (t2 - t1 < 10) {
-        cout << "Increase fryer heat before taking the third reading.\n";
-    }
-
     cout << "Enter third temperature: ";
     cin >> t3;
 
-    return 0;
+    return 0; // End program
 }
