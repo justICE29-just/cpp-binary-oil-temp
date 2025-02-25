@@ -1,43 +1,24 @@
 #include <iostream>
 using namespace std;
-
+	
 int main() {
-    char choice;
+    int t1, t2, t3;
 
-    do {
-        int t1, t2, t3;
+    cout << "Enter first temperature: ";
+    cin >> t1;
 
-        cout << "\nMagwinya Oil Temperature Monitor\n";
-        cout << "--------------------------------\n";
+    cout << "Enter second temperature: ";
+    cin >> t2;
 
-        cout << "Enter first temperature: ";
-        cin >> t1;
+    // Check if temperature change is within valid range
+    if (t2 - t1 > 50) {
+        cout << "Reduce fryer heat before taking the third reading.\n";
+    } else if (t2 - t1 < 10) {
+        cout << "Increase fryer heat before taking the third reading.\n";
+    }
 
-        cout << "Enter second temperature: ";
-        cin >> t2;
+    cout << "Enter third temperature: ";
+    cin >> t3;
 
-        if (t2 - t1 > 50) {
-            cout << "⚠ Reduce fryer heat before taking the third reading.\n";
-        } else if (t2 - t1 < 10) {
-            cout << "⚠ Increase fryer heat before taking the third reading.\n";
-        }
-
-        cout << "Enter third temperature: ";
-        cin >> t3;
-
-        if (t3 >= 150 && t3 <= 190) {
-            cout << "✅ You may start frying the Magwinyas.\n";
-        } else {
-            cout << "❌ Oil is not ready for frying!\n";
-        }
-
-        cout << "--------------------------------\n";
-        cout << "Would you like to enter another set of temperatures? (y/n): ";
-        cin >> choice;
-
-    } while (choice == 'y' || choice == 'Y');
-
-    cout << "Program exited. Have a great day!\n";
     return 0;
 }
-
